@@ -1,0 +1,61 @@
+{
+	"common": {
+		"fields": {
+			"authorization": "authentication token of user."
+		},
+		"response": {
+			"200": "Success",
+			"400": "%s field missing/invalid",
+			"404": "Data you have requsted is Not Found.",
+			"409": "Conflict",
+			"500": "Internal server error"
+		},
+		"responseDescription": {
+			"200": "This will get while request successfully executed.",
+			"400": "Bad request while some data is missing or invalid.",
+			"401": "This will occur while refresh token is expired or blacklisted.",
+			"404": "This will occur while requested data not found.",
+			"408": "This will occur while requested data has found, but has mismatch with request",
+			"409": "This will occur while requested data has conflict.",
+			"500": "This error occur while internal server error."
+		}
+	},
+	"users": {
+		"postSignUp": {
+			"description": "Api for to SignUp with New User",
+			"notes": "This API allows you to SignUp with New User"
+		},
+		"postSignIn": {
+			"description": "Api for to Login user",
+			"notes": "This API allows you to Login"
+		},
+		"postSignOut": {
+			"description": "Api for to Logout user",
+			"notes": "This API allows you to Logout"
+		},
+		"getProfile": {
+			"description": "Api for to get users profile",
+			"notes": "This API allows you to get users profile"
+		},
+		"getSearch": {
+			"description": "Api for to get users profile Search",
+			"notes": "This API allows you to get users profile Search"
+		},
+		"signIn": {
+			"description": "Api for to user SignIn",
+			"notes": "This API allows you to user SignIn"
+		},
+		"response": {
+			"404": {
+				"id": "User not found with your UserId",
+				"notFound": "user not found",
+				"invalidMobile": "This mobile is not registered with us, please register as a new user or try with a different mobile or password",
+				"invalidEmail": "This Email is not registered with us, please register as a new user or try with a different Email or password"
+			},
+			"408": "The password entered does not match the email address entered above!",
+			"409": {
+				"unique": "Sorry! User has found with same email Id"
+			}
+		}
+	}
+}
